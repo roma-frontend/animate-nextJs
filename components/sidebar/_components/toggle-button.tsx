@@ -9,7 +9,7 @@ const ToggleButton = ({ setOpen }: { setOpen: any }) => {
       onClick={() => setOpen((prev: any) => !prev)}
       className="fixed flex items-center justify-center w-[50px] h-[50px] rounded-full left-[25px] top-[25px] bg-white cursor-pointer z-[1] group"
     >
-      <svg width="23" height="23" viewBox="0 0 23 23">
+      <motion.svg width="23" height="23" viewBox="0 0 23 23">
         <motion.path
           strokeWidth="3"
           stroke="black"
@@ -41,7 +41,7 @@ const ToggleButton = ({ setOpen }: { setOpen: any }) => {
           }}
           className="group-hover:stroke-black dark:group-hover:stroke-white"
         />
-      </svg>
+      </motion.svg>
     </Button>
   );
 };

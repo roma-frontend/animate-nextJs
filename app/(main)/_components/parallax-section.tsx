@@ -59,7 +59,7 @@ const ParallaxSection = ({ id, type }: ParallaxSectionProps) => {
           position: "absolute",
           zIndex: "2",
         }}
-        className="dark:bg-[url('/planets.png')]"
+        className="dark:bg-[url('/planets.webp')]"
       ></motion.div>
       <motion.div
         style={{
@@ -72,7 +72,7 @@ const ParallaxSection = ({ id, type }: ParallaxSectionProps) => {
           opacity: ".2",
           x: yBg,
         }}
-        className="bg-[url('/stars.webp')] dark:bg-[url('/stars.png')]"
+        className="bg-[url('/stars.webp')] dark:bg-[url('/stars-night.webp')]"
       ></motion.div>
     </section>
   );
