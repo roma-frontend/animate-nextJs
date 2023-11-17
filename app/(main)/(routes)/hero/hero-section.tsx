@@ -60,28 +60,14 @@ const HeroSection = ({ id }: { id: string }) => {
       className="flex overflow-hidden min-h-[70vw] lg:min-h-[100vh]"
     >
       <div className="relative flex items-center justify-between md:flex-row flex-col max-w-[100%] md:max-w-[90%] xl:max-w-[90vw] 2xl:max-w-[80vw] m-auto px-[1.25rem] pt-[1.25rem] md:pt-0 gap-[2rem]">
-        <motion.div
-          className="w-full md:w-[50%] flex flex-col justify-center gap-[40px]"
-          variants={textVariants}
-          initial="initial"
-          animate="animate"
-        >
-          <motion.h2
-            className="text-[1.125rem] md:text-[24px] text-[#04355C] dark:text-[#18B0B1] tracking-0 sm:tracking-[5px] md:tracking-[10px] md:text-left text-center"
-            variants={textVariants}
-          >
+        <div className="w-full md:w-[50%] flex flex-col justify-center gap-[40px]">
+          <h2 className="text-[1.125rem] md:text-[24px] text-[#04355C] dark:text-[#18B0B1] tracking-0 sm:tracking-[5px] md:tracking-[10px] md:text-left text-center">
             ԸՆՏՐԻՐ ԼԱՎԱԳՈՒՅՆԻՆ
-          </motion.h2>
-          <motion.h1
-            className="text-[32px] md:text-[4.7vw] leading-snug tracking-[3px] md:tracking-[5px] md:text-left text-center"
-            variants={textVariants}
-          >
+          </h2>
+          <h1 className="text-[32px] md:text-[4.7vw] leading-snug tracking-[3px] md:tracking-[5px] md:text-left text-center">
             Բանալիների ծրագրավորում
-          </motion.h1>
-          <motion.div
-            variants={textVariants}
-            className="flex flex-wrap gap-[1.5rem] md:justify-start justify-center"
-          >
+          </h1>
+          <motion.div className="flex flex-wrap gap-[1.5rem] md:justify-start justify-center">
             <Link href="#Portfolio">
               <motion.button
                 className="p-[20px] border border-[#111132] dark:border-white rounded-[10px] bg-transparent text-[#111132] dark:text-white cursor-pointer font-light"
@@ -119,7 +105,7 @@ const HeroSection = ({ id }: { id: string }) => {
               animate="scrollButton"
             />
           </div>
-        </motion.div>
+        </div>
         <motion.div
           className="absolute text-[30vh] md:text-[40vh] lg:text-[50vh] tracking-[5px] bottom-0 md:bottom-[50px] lg:bottom-[-120px] whitespace-nowrap z-[-1] text-[#00000009] dark:text-[#ffffff09] w-[50%] font-bold"
           variants={imageVariants}
@@ -128,12 +114,7 @@ const HeroSection = ({ id }: { id: string }) => {
         >
           Բանալիների պատրաստում
         </motion.div>
-        <motion.div
-          className="flex items-center h-full w-[80%] md:w-[50%]"
-          variants={carVariants}
-          initial="initial"
-          animate="animate"
-        >
+        <div className="flex items-center h-full w-[80%] md:w-[50%]">
           <Image
             src="/hero.webp"
             alt="hero image"
@@ -143,7 +124,7 @@ const HeroSection = ({ id }: { id: string }) => {
             sizes="100vw"
             priority
           />
-        </motion.div>
+        </div>
       </div>
     </section>
   );
