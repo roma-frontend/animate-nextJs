@@ -164,7 +164,7 @@ const FormPage = () => {
             </Button>
           ) : (
             <Button
-              aria-label="button to send data"
+              aria-label="Ուղարկել"
               variant="default"
               disabled={isLoading}
               className="h-full p-[20px] border-0 rounded-[5px] bg-[#0B5C6F] hover:bg-[#094858] font-semibold text-white"

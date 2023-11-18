@@ -28,7 +28,7 @@ const ServicesSection = () => {
   const router = useRouter();
 
   const handleClick = (id: number) => {
-    router.push(`/services/${id}`);
+    router.push(`/services/${id}`, { cache: "no-store" });
   };
 
   const isInView = useInView(ref, { margin: "-100px" });
@@ -65,6 +65,7 @@ const ServicesSection = () => {
               width={300}
               height={100}
               className="object-cover rounded-full w-[300px] h-[100px]"
+              priority
             />
             <h1 className="text-[1.5rem] md:text-[3.3vw] font-thin">
               <b>Ունիկալ</b> մտքեր
@@ -95,7 +96,7 @@ const ServicesSection = () => {
                 <h2 className="mb-[1rem]">{"Ключ для " + product.heading}</h2>
                 <p className="mb-[2rem]">{product.paragraph}</p>
                 <Button
-                  aria-label="single page button"
+                  aria-label={product.buttonText}
                   className="h-[50px] bg-[#0B5C6F] hover:bg-[#094858] border-0 text-[24px] font-light text-white cursor-pointer"
                   onClick={() => handleClick(product.id)}
                 >
