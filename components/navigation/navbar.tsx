@@ -20,7 +20,7 @@ const Navbar = () => {
   const items = [
     {
       name: "Homepage",
-      href: "",
+      href: "#Homepage",
     },
     {
       name: "Services",
@@ -61,8 +61,7 @@ const Navbar = () => {
               key={item.name}
               className={cn(
                 "text-black dark:text-white capitalize text-[16px] font-medium p-[1rem] transition-all ease-linear hover:text-[#18B0B1] dark:hover:text-[#18B0B1] hover:[text-shadow:_0_0_50px_#18B0B1] dark:hover:[text-shadow:_0_0_50px_#18B0B1]",
-                pathname === "/" &&
-                  activeItem === `${item.href}` &&
+                activeItem === `${item.href}` &&
                   "text-[#18B0B1] dark:text-[#18B0B1]"
               )}
             >

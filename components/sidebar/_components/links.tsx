@@ -1,7 +1,6 @@
 import { useHash } from "@/hooks/use-hash";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 interface SidebarProps {
@@ -11,7 +10,7 @@ interface SidebarProps {
 const items = [
   {
     name: "Homepage",
-    href: "",
+    href: "#Homepage",
   },
   {
     name: "Services",
@@ -54,7 +53,6 @@ const itemVariant = {
 
 const Links = ({ closeSidebar }: SidebarProps) => {
   const [activeItem, setActiveItem] = useState<string | null>(null);
-  const pathname = usePathname();
 
   useEffect(() => {
     const cleanup = useHash(setActiveItem);
@@ -81,8 +79,7 @@ const Links = ({ closeSidebar }: SidebarProps) => {
           key={item.name}
           className={cn(
             "text-white dark:text-black capitalize text-[32px] md:text-[40px]",
-            pathname === "/" &&
-              activeItem === `${item.href}` &&
+            activeItem === `${item.href}` &&
               "text-[#18B0B1] dark:text-[#18B0B1]"
           )}
           variants={itemVariant}
