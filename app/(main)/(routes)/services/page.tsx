@@ -65,7 +65,6 @@ const ServicesSection = () => {
               width={300}
               height={100}
               className="object-cover rounded-full w-[300px] h-[100px]"
-              priority
             />
             <h1 className="text-[1.5rem] md:text-[3.3vw] font-thin">
               <b>Ունիկալ</b> մտքեր

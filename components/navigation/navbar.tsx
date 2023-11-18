@@ -60,9 +60,9 @@ const Navbar = () => {
               href={pathname === "/" ? `${item.href}` : `/${item.href}`}
               key={item.name}
               className={cn(
-                "text-black dark:text-white capitalize text-[16px] font-medium p-[1rem] transition-all ease-linear hover:text-[#18B0B1] dark:hover:text-[#18B0B1] hover:[text-shadow:_0_0_50px_#18B0B1] dark:hover:[text-shadow:_0_0_50px_#18B0B1]",
+                "text-black dark:text-white capitalize text-[16px] font-medium p-[1rem] transition-all ease-linear hover:text-[#096177] dark:hover:text-[#18B0B1] hover:[text-shadow:_0_0_50px_#096177] dark:hover:[text-shadow:_0_0_50px_#18B0B1]",
                 activeItem === `${item.href}` &&
-                  "text-[#18B0B1] dark:text-[#18B0B1]"
+                  "text-[#096177] dark:text-[#18B0B1]"
               )}
             >
               {item.name}

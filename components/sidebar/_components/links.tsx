@@ -80,7 +80,7 @@ const Links = ({ closeSidebar }: SidebarProps) => {
           className={cn(
             "text-white dark:text-black capitalize text-[32px] md:text-[40px]",
             activeItem === `${item.href}` &&
-              "text-[#18B0B1] dark:text-[#18B0B1]"
+              "text-[#096177] dark:text-[#18B0B1]"
           )}
           variants={itemVariant}
           whileHover={{ scale: 1.1 }}
