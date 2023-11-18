@@ -60,7 +60,7 @@ const Navbar = () => {
               href={pathname === "/" ? `${item.href}` : `/${item.href}`}
               key={item.name}
               className={cn(
-                "text-black dark:text-white capitalize text-[16px] font-medium p-[1rem] transition-all ease-linear hover:scale-[1.05]",
+                "text-black dark:text-white capitalize text-[16px] font-medium p-[1rem] transition-all ease-linear hover:text-[#18B0B1] dark:hover:text-[#18B0B1] hover:[text-shadow:_0_0_50px_#18B0B1] dark:hover:[text-shadow:_0_0_50px_#18B0B1]",
                 pathname === "/" &&
                   activeItem === `${item.href}` &&
                   "text-[#18B0B1] dark:text-[#18B0B1]"
@@ -73,7 +73,10 @@ const Navbar = () => {
         <div className="hidden md:flex items-center md:w-auto mr-0 md:mr-2">
           <ul className="flex px-4 space-x-0 md:space-x-4">
             {navLinks.map((link, index) => (
-              <li key={index} className="grid cursor-pointer">
+              <li
+                key={index}
+                className="grid cursor-pointer hover:scale-[1.05] dark:hover:scale-[1.05]"
+              >
                 <NavLink
                   href={link.href}
                   title={link.title}

@@ -97,6 +97,7 @@ const FormPage = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
+          viewport={{ once: true }}
         >
           <FormField
             name="name"
