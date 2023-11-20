@@ -124,6 +124,7 @@ const HeroSection = ({ id }: { id: string }) => {
             sizes="100vw"
             priority
             loading="eager"
+            unoptimized
           />
         </div>
       </div>
