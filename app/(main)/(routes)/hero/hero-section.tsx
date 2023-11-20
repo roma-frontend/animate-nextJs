@@ -118,8 +118,8 @@ const HeroSection = ({ id }: { id: string }) => {
           <Image
             src="/hero.webp"
             alt="hero image"
-            width={100}
-            height={100}
+            width={540}
+            height={314}
             className="w-full h-full object-cover"
             sizes="100vw"
             priority
