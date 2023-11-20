@@ -123,6 +123,7 @@ const HeroSection = ({ id }: { id: string }) => {
             className="w-full h-full object-cover"
             sizes="100vw"
             priority
+            loading="eager"
           />
         </div>
       </div>
