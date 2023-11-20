@@ -61,8 +61,8 @@ const HeroSection = ({ id }: { id: string }) => {
     >
       <div className="relative flex items-center justify-between md:flex-row flex-col max-w-[100%] md:max-w-[90%] xl:max-w-[90vw] 2xl:max-w-[80vw] m-auto px-[1.25rem] pt-[1.25rem] md:pt-0 gap-[2rem]">
         <div className="w-full md:w-[50%] flex flex-col justify-center gap-[40px]">
-          <h2 className="text-[1.125rem] md:text-[24px] text-[#04355C] dark:text-[#18B0B1] tracking-0 sm:tracking-[5px] md:tracking-[10px] md:text-left text-center">
-            ԸՆՏՐԻՐ ԼԱՎԱԳՈՒՅՆԻՆ
+          <h2 className="text-[1.125rem] md:text-[24px] text-[#04355C] dark:text-[#18B0B1] tracking-0 sm:tracking-[5px] md:tracking-[10px] md:text-left text-center uppercase">
+            ընտրիր լավագույնին
           </h2>
           <h1 className="text-[32px] md:text-[4.7vw] leading-snug tracking-[3px] md:tracking-[5px] md:text-left text-center">
             Բանալիների ծրագրավորում
