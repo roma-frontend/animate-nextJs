@@ -36,7 +36,7 @@ const ServicesSection = () => {
   return (
     <motion.section
       id="Services"
-      className="w-full flex items-center justify-center gap-[2rem]"
+      className="w-full min-h-screen flex items-center justify-center gap-[2rem]"
       variants={variants}
       initial="initial"
       whileInView="animate"
