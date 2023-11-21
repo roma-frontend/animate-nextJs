@@ -77,7 +77,7 @@ const ServicesSection = () => {
             <ArrowDownCircle />
           </div>
         </motion.div>
-        <motion.div className="relative flex flex-wrap justify-center m-auto z-[5]">
+        <motion.div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 m-auto z-[5]">
           {contentData.map((product) => (
             <motion.div
               key={product.id}
@@ -96,7 +96,7 @@ const ServicesSection = () => {
                 <p className="mb-[2rem]">{product.paragraph}</p>
                 <Button
                   aria-label={product.buttonText}
-                  className="h-[50px] bg-[#0B5C6F] hover:bg-[#094858] border-0 text-[24px] font-light text-white cursor-pointer"
+                  className="min-h-[50px] bg-[#0B5C6F] hover:bg-[#094858] border-0 text-[20px] lg:text-[22px] font-light text-white cursor-pointer"
                   onClick={() => handleClick(product.id)}
                 >
                   {product.buttonText}
