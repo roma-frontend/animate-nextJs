@@ -5,87 +5,25 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 import { useModal } from "@/hooks/use-modal";
+import { ItemProps } from "@/lib/single-data";
 
-type ItemProps = {
-  id: number;
-  title: string;
-  img: string;
-  desc: string;
-};
-
-const items: ItemProps[] = [
-  {
-    id: 1,
-    title: "React Commerce",
-    img: "https://images.pexels.com/photos/18441518/pexels-photo-18441518/free-photo-of-luma-light-festival-in-queenstown-new-zealand.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat possimus dolore earum quod quo cupiditate assumenda quam vero commodi rerum numquam odit quae adipisci veniam quis distinctio tenetur, aliquid praesentium?",
-  },
-  {
-    id: 2,
-    title: "Next.js Blog",
-    img: "https://images.pexels.com/photos/13488937/pexels-photo-13488937.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat possimus dolore earum quod quo cupiditate assumenda quam vero commodi rerum numquam odit quae adipisci veniam quis distinctio tenetur, aliquid praesentium?",
-  },
-  {
-    id: 3,
-    title: "Vanilla js App",
-    img: "https://images.pexels.com/photos/18235303/pexels-photo-18235303/free-photo-of-autumn-s-reflection.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat possimus dolore earum quod quo cupiditate assumenda quam vero commodi rerum numquam odit quae adipisci veniam quis distinctio tenetur, aliquid praesentium?",
-  },
-  {
-    id: 4,
-    title: "Music App",
-    img: "https://images.pexels.com/photos/18693461/pexels-photo-18693461/free-photo-of-a-city-with-a-tower-and-a-clock-tower.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat possimus dolore earum quod quo cupiditate assumenda quam vero commodi rerum numquam odit quae adipisci veniam quis distinctio tenetur, aliquid praesentium?",
-  },
-];
-
-const VideoModal = () => {
-  const { isOpen, onClose } = useModal();
-
-  return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent>
-        <DialogHeader>
-          <DialogTitle>Are you sure absolutely sure?</DialogTitle>
-          <DialogDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
-          </DialogDescription>
-          <DialogFooter>
-            <video controls width="100%">
-              <source
-                src="https://www.youtube.com/results?search_query=autokey+mercedes"
-                type="video/mp4"
-              />
-            </video>
-          </DialogFooter>
-        </DialogHeader>
-      </DialogContent>
-    </Dialog>
-  );
-};
+import { items } from "@/lib/single-data";
 
 const Single = ({ item }: { item: ItemProps }) => {
-  const [isModalOpen, setModalOpen] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
+  const { isOpen, onOpen, onClose } = useModal();
+  const [isLoading, setIsLoading] = useState(false);
 
-  const openModal = () => {
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
+  const onClick = () => {
+    if (isLoading) {
+      setIsLoading(false);
+    } else {
+      setIsLoading(true);
+      onOpen();
+    }
   };
 
   const { scrollYProgress } = useScroll({
@@ -126,11 +64,18 @@ const Single = ({ item }: { item: ItemProps }) => {
               aria-label="button to see demo"
               className="w-[200px] bg-[#0B5C6F] hover:bg-[#094858] hover:text-white rounded-lg text-white"
               variant={"outline"}
-              onClick={openModal}
+              onClick={onClick}
             >
               See Demo
             </Button>
           </motion.div>
+          <Dialog open={isOpen} onOpenChange={onClose}>
+            <DialogContent className="w-full">
+              <video controls width="100%" height="auto">
+                <source src={item.videoUrl} type="video/mp4" />
+              </video>
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </section>
