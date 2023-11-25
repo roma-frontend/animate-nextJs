@@ -6,7 +6,6 @@ import ServicesSection from "./services/page";
 export default function Home() {
   return (
     <div className="flex flex-col">
-      {/* <Cursor /> */}
       <HeroSection id="Homepage" />
       <ParallaxSection id="Parallax" type="services" />
       <ServicesSection />
