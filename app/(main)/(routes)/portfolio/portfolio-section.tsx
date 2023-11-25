@@ -2,9 +2,19 @@
 
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+
+import { useModal } from "@/hooks/use-modal";
 
 type ItemProps = {
   id: number;
@@ -40,8 +50,43 @@ const items: ItemProps[] = [
   },
 ];
 
+const VideoModal = () => {
+  const { isOpen, onClose } = useModal();
+
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Are you sure absolutely sure?</DialogTitle>
+          <DialogDescription>
+            This action cannot be undone. This will permanently delete your
+            account and remove your data from our servers.
+          </DialogDescription>
+          <DialogFooter>
+            <video controls width="100%">
+              <source
+                src="https://www.youtube.com/results?search_query=autokey+mercedes"
+                type="video/mp4"
+              />
+            </video>
+          </DialogFooter>
+        </DialogHeader>
+      </DialogContent>
+    </Dialog>
+  );
+};
+
 const Single = ({ item }: { item: ItemProps }) => {
+  const [isModalOpen, setModalOpen] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -81,6 +126,7 @@ const Single = ({ item }: { item: ItemProps }) => {
               aria-label="button to see demo"
               className="w-[200px] bg-[#0B5C6F] hover:bg-[#094858] hover:text-white rounded-lg text-white"
               variant={"outline"}
+              onClick={openModal}
             >
               See Demo
             </Button>

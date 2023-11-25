@@ -20,7 +20,7 @@ const Cursor = () => {
 
   return (
     <motion.div
-      className="w-[50px] h-[50px] rounded-full border border-black dark:border-white fixed z-[100]"
+      className="hidden md:block w-[50px] h-[50px] rounded-full border border-black dark:border-white fixed z-[100]"
       animate={{ x: position.x + 10, y: position.y + 10 }}
     ></motion.div>
   );
