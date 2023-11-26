@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 
 import { Radio_Canada } from "next/font/google";
+import Head from "next/head";
 import "./globals.css";
 
 const font = Radio_Canada({ subsets: ["latin"] });
@@ -20,7 +21,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="hy" suppressHydrationWarning>
+      <Head>
+        <title>AutoKey</title>
+      </Head>
       <body className={cn(font.className, "bg-[white] dark:bg-[#111132]")}>
         <ToastProvider />
         <ThemeProvider
