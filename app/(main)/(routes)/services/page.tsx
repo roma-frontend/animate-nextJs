@@ -28,7 +28,7 @@ const ServicesSection = () => {
   const router = useRouter();
 
   const handleClick = (id: number) => {
-    router.push(`/services/${id}`, { cache: "no-store" });
+    router.push(`/services/${id}`, { cache: 'force-cache' });
   };
 
   const isInView = useInView(ref, { margin: "-100px" });
