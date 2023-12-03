@@ -2,7 +2,7 @@
 
 import ArrowDownCircle from "@/components/animate-arrow-down";
 import { Button } from "@/components/ui/button";
-import { contentData } from "@/lib/content-data";
+import { contentData } from "@/constants/content-data";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";

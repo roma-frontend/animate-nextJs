@@ -8,9 +8,9 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 import { useModal } from "@/hooks/use-modal";
-import { ItemProps } from "@/lib/single-data";
+import { ItemProps } from "@/constants/single-data";
 
-import { items } from "@/lib/single-data";
+import { items } from "@/constants/single-data";
 
 const Single = ({ item }: { item: ItemProps }) => {
   const ref = useRef<HTMLDivElement | null>(null);
