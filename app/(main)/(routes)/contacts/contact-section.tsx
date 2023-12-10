@@ -48,11 +48,13 @@ const ContactSection = ({ id }: { id: string }) => {
           </motion.h1>
           <div className="max-w-fit text-center p-2">
             <Link
-              href="mailto:hello@next.dev"
+              href="mailto:vanchsimonyan1992@mail.ru"
               className="text-[20px] flex flex-col text-center md:text-left gap-[10px] transition-all ease-linear hover:scale-[1.03]"
             >
               Էլ․ հասցե
-              <span className="text-sm font-normal">hello@next.dev</span>
+              <span className="text-sm font-normal">
+                vanchsimonyan1992@mail.ru
+              </span>
             </Link>
           </div>
           <div className="max-w-fit text-center p-2">
