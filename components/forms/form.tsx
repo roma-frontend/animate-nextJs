@@ -108,7 +108,8 @@ const FormPage = () => {
                   <Input
                     disabled={isLoading}
                     className="h-full p-[20px] bg-zinc-100 dark:bg-transparent border border-white rounded-[5px] focus-visible:ring-0 text-black dark:text-white focus-visible:ring-offset-0"
-                    placeholder="Մուտքագրեք ձեր անունը"
+                    // placeholder="Մուտքագրեք ձեր անունը"
+                    placeholder="Enter your name"
                     {...field}
                     autoComplete="on"
                   />
@@ -126,7 +127,8 @@ const FormPage = () => {
                   <Input
                     disabled={isLoading}
                     className="h-full p-[20px] bg-zinc-100 dark:bg-transparent border border-white rounded-[5px] focus-visible:ring-0 text-black dark:text-white focus-visible:ring-offset-0"
-                    placeholder="Մուտքագրեք ձեր էլ․ հասցեն"
+                    // placeholder="Մուտքագրեք ձեր էլ․ հասցեն"
+                    placeholder="Enter your email"
                     {...field}
                     autoComplete="on"
                   />
@@ -144,7 +146,8 @@ const FormPage = () => {
                   <Textarea
                     disabled={isLoading}
                     className="p-[20px] border border-white rounded-[5px] bg-zinc-100 dark:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 resize-none"
-                    placeholder="Հաղորդագրություն..."
+                    // placeholder="Հաղորդագրություն..."
+                    placeholder="Message ..."
                     {...field}
                     rows={8}
                   />
@@ -164,12 +167,14 @@ const FormPage = () => {
             </Button>
           ) : (
             <Button
-              aria-label="Ուղարկել"
+              // aria-label="Ուղարկել"
+              aria-label="Send button"
               variant="default"
               disabled={isLoading}
               className="h-full p-[20px] border-0 rounded-[5px] bg-[#0B5C6F] hover:bg-[#094858] font-semibold text-white"
             >
-              Ուղարկել
+              {/* Ուղարկել */}
+              Send
             </Button>
           )}
         </motion.form>

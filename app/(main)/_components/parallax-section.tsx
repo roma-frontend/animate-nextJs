@@ -35,7 +35,7 @@ const ParallaxSection = ({ id, type }: ParallaxSectionProps) => {
         className="relative z-[100] text-[40px] lg:text-[100px] md:text-[80px] sm:text-[70] text-black dark:text-white text-center"
         style={{ y: yText }}
       >
-        {type === "services" ? "Մեր մոտեցումները" : "Գրանցված արդյունքները"}
+        {type === "services" ? "Our ideas" : "Our results"}
       </motion.h1>
       <motion.div
         style={{

@@ -44,26 +44,35 @@ const ContactSection = ({ id }: { id: string }) => {
           variants={variants}
         >
           <motion.h1 className="text-center md:text-left text-[32px] lg:text-[70px] md:text-[50px] sm:text-[40px] leading-[88px]">
-            Կապ մեզ հետ
+            {/* Կապ մեզ հետ */}
+            Contact Us
           </motion.h1>
           <div className="max-w-fit text-center p-2">
             <Link
-              href="mailto:hello@next.dev"
+              // href="mailto:vanchsimonyan1992@mail.ru"
+              href="#"
               className="text-[20px] flex flex-col text-center md:text-left gap-[10px] transition-all ease-linear hover:scale-[1.03]"
             >
-              Էլ․ հասցե
-              <span className="text-sm font-normal">hello@next.dev</span>
+              {/* Էլ․ հասցե */}
+              [Email]
+              <span className="text-sm font-normal">
+                {/* vanchsimonyan1992@mail.ru */}
+                @dev.com
+              </span>
             </Link>
           </div>
           <div className="max-w-fit text-center p-2">
             <Link
-              href="https://maps.app.goo.gl/kooK99nEhonc95Sa7"
+              // href="https://maps.app.goo.gl/kooK99nEhonc95Sa7"
+              href="#"
               className="text-[20px] flex flex-col text-center md:text-left gap-[10px] transition-all ease-linear hover:scale-[1.03]"
               target="_blank"
             >
-              Հասցե
+              {/* Հասցե */}
+              Address
               <span className="text-sm font-normal">
-                ք․ Երևան, Նորք-Մարաշ, 13-րդ փողոց
+                {/* ք․ Երևան, Նորք-Մարաշ, 13-րդ փողոց */}
+                [Address]
               </span>
             </Link>
           </div>
@@ -72,8 +81,12 @@ const ContactSection = ({ id }: { id: string }) => {
               href="tel:37433087788"
               className="text-[20px] flex flex-col text-center md:text-left gap-[10px] transition-all ease-linear hover:scale-[1.03]"
             >
-              Հեռախոս
-              <span className="text-sm font-normal">+374 33 087 788</span>
+              {/* Հեռախոս */}
+              Phone
+              <span className="text-sm font-normal">
+                {/* +374 33 087 788 */}
+                +123 456 789
+              </span>
             </Link>
           </div>
           <div className="block md:hidden items-center md:w-auto mr-0 md:mr-2">

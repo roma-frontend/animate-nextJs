@@ -3,7 +3,7 @@
 import Loader from "@/components/loader";
 import NotFoundPage from "@/components/not-found";
 import Slider from "@/components/slider-carousel";
-import { contentData } from "@/lib/content-data";
+import { contentData } from "@/constants/content-data";
 import { motion } from "framer-motion";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -97,7 +97,7 @@ const ServicePage = () => {
           className="text-center text-[32px] md:text-[40px] lg:text-[60px] tracking-wide mb-[2rem] md:mb-0"
           variants={textVariants}
         >
-          Информационная страница
+          Info Page
         </motion.h1>
         <div className="max-w-[100%] lg:max-w-[90vw] 2xl:max-w-[80vw] m-auto flex items-center justify-between gap-[2rem] flex-col md:flex-row px-[1.25rem]">
           <motion.div

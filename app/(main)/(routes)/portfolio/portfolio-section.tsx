@@ -7,10 +7,10 @@ import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
+import { ItemProps } from "@/constants/single-data";
 import { useModal } from "@/hooks/use-modal";
-import { ItemProps } from "@/lib/single-data";
 
-import { items } from "@/lib/single-data";
+import { items } from "@/constants/single-data";
 
 const Single = ({ item }: { item: ItemProps }) => {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -28,7 +28,6 @@ const Single = ({ item }: { item: ItemProps }) => {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    // offset: ["start start", "end start"],
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-100, 300]);
@@ -99,7 +98,8 @@ const PortfolioSection = ({ id }: { id: string }) => {
     <section id="Portfolio" ref={ref}>
       <div className="text-center text-black dark:text-white text-[36px] z-[1]">
         <h1 className="text-[32px] sm:text-[40px] md:text-[50px] lg:text-[80px]">
-          Կարծիքներ
+          {/* Կարծիքներ */}
+          Feedbacks
         </h1>
         <motion.div
           style={{ scaleX }}

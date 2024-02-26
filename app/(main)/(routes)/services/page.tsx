@@ -2,7 +2,7 @@
 
 import ArrowDownCircle from "@/components/animate-arrow-down";
 import { Button } from "@/components/ui/button";
-import { contentData } from "@/lib/content-data";
+import { contentData } from "@/constants/content-data";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -28,7 +28,7 @@ const ServicesSection = () => {
   const router = useRouter();
 
   const handleClick = (id: number) => {
-    router.push(`/services/${id}`, { cache: "no-store" });
+    router.push(`/services/${id}`, { cache: "force-cache" });
   };
 
   const isInView = useInView(ref, { margin: "-100px" });
@@ -49,8 +49,13 @@ const ServicesSection = () => {
           variants={variants}
         >
           <p className="w-full md:w-[60%] font-light text-[20px] text-gray-400 text-center md:text-right">
-            Մենք կենտրոնանում ենք ձեր նոր ձեռքբերումների <br /> և նորաոճ մեքենա
-            ունենալու վրա։
+            {/* Մենք կենտրոնանում ենք ձեր նոր ձեռքբերումների  */}
+            Lorem ipsum dolor sit amet, consectetur adipisicing.
+            <br />
+            {/* և նորաոճ մեքենա */}
+            Maiores, minus.
+            {/* ունենալու վրա։ */}
+            Aliquid, magni!
           </p>
           <hr className="w-full md:w-[40%] border-0 border-t-[0.5px]" />
         </motion.div>
@@ -67,12 +72,14 @@ const ServicesSection = () => {
               className="object-cover rounded-full w-[300px] h-[100px]"
             />
             <h1 className="text-[1.5rem] md:text-[3.3vw] font-thin">
-              <b>Ունիկալ</b> մտքեր
+              {/* <b>Ունիկալ</b> մտքեր */}
+              <b>unique</b> ideas
             </h1>
           </div>
           <div className="flex items-center gap-[2rem] flex-col md:flex-row">
             <h1 className="text-[1.5rem] md:text-[3.3vw] font-thin">
-              <b>Ձեր մեքենայի</b> համար
+              {/* <b>Ձեր մեքենայի</b> համար */}
+              <b>For your</b> car
             </h1>
             <ArrowDownCircle />
           </div>

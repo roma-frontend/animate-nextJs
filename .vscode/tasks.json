@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "CheckEmptyFolders",
+      "type": "shell",
+      "command": "node",
+      "args": ["${workspaceFolder}/check-empty-folders.js"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

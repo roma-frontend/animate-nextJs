@@ -38,20 +38,6 @@ const imageVariants = {
     },
   },
 };
-const carVariants = {
-  initial: {
-    x: 500,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.1,
-    },
-  },
-};
 
 const HeroSection = ({ id }: { id: string }) => {
   return (
@@ -62,10 +48,12 @@ const HeroSection = ({ id }: { id: string }) => {
       <div className="relative flex items-center justify-between md:flex-row flex-col max-w-[100%] md:max-w-[90%] xl:max-w-[90vw] 2xl:max-w-[80vw] m-auto px-[1.25rem] pt-[1.25rem] md:pt-0 gap-[2rem]">
         <div className="w-full md:w-[50%] flex flex-col justify-center gap-[40px]">
           <h2 className="text-[1.125rem] md:text-[24px] text-[#04355C] dark:text-[#18B0B1] tracking-0 sm:tracking-[5px] md:tracking-[10px] md:text-left text-center uppercase">
-            ընտրիր լավագույնին
+            {/* ընտրիր լավագույնին */}
+            Lorem Ipsum
           </h2>
           <h1 className="text-[32px] md:text-[4.7vw] leading-snug tracking-[3px] md:tracking-[5px] md:text-left text-center">
-            Բանալիների ծրագրավորում
+            {/* Բանալիների ծրագրավորում */}
+            Amet consectetur adipisicing elit.
           </h1>
           <motion.div className="flex flex-wrap gap-[1.5rem] md:justify-start justify-center">
             <Link href="#Portfolio">
@@ -73,7 +61,8 @@ const HeroSection = ({ id }: { id: string }) => {
                 className="p-[20px] border border-[#111132] dark:border-white rounded-[10px] bg-transparent text-[#111132] dark:text-white cursor-pointer font-light"
                 variants={textVariants}
               >
-                Տեսնել ավելին
+                {/* Տեսնել ավելին */}
+                See more
               </motion.button>
             </Link>
             <Link href="#Contacts">
@@ -81,7 +70,8 @@ const HeroSection = ({ id }: { id: string }) => {
                 className="p-[20px] border border-[#111132] dark:border-white rounded-[10px] bg-transparent text-[#111132] dark:text-white cursor-pointer font-light"
                 variants={textVariants}
               >
-                Կապ մեզ հետ
+                {/* Կապ մեզ հետ */}
+                Contact us
               </motion.button>
             </Link>
           </motion.div>
@@ -112,7 +102,8 @@ const HeroSection = ({ id }: { id: string }) => {
           initial="initial"
           animate="animate"
         >
-          Բանալիների պատրաստում
+          {/* Բանալիների պատրաստում */}
+          Key programming
         </motion.div>
         <div className="flex items-center h-full w-[80%] md:w-[50%]">
           <Image
