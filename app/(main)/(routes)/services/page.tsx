@@ -2,7 +2,7 @@
 
 import ArrowDownCircle from "@/components/animate-arrow-down";
 import { Button } from "@/components/ui/button";
-import { contentData } from "@/constants/content-data";
+import { contentData } from "@/lib/content-data";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -28,7 +28,7 @@ const ServicesSection = () => {
   const router = useRouter();
 
   const handleClick = (id: number) => {
-    router.push(`/services/${id}`, { cache: "force-cache" });
+    router.push(`/services/${id}`, { cache: "no-store" });
   };
 
   const isInView = useInView(ref, { margin: "-100px" });
@@ -50,12 +50,12 @@ const ServicesSection = () => {
         >
           <p className="w-full md:w-[60%] font-light text-[20px] text-gray-400 text-center md:text-right">
             {/* Մենք կենտրոնանում ենք ձեր նոր ձեռքբերումների  */}
-            Lorem ipsum dolor sit amet, consectetur adipisicing.
+            Lorem ipsum dolor sit amet.
             <br />
             {/* և նորաոճ մեքենա */}
-            Maiores, minus.
+            Nihil, perspiciatis.
             {/* ունենալու վրա։ */}
-            Aliquid, magni!
+            quo iure dolorem?
           </p>
           <hr className="w-full md:w-[40%] border-0 border-t-[0.5px]" />
         </motion.div>
@@ -73,13 +73,13 @@ const ServicesSection = () => {
             />
             <h1 className="text-[1.5rem] md:text-[3.3vw] font-thin">
               {/* <b>Ունիկալ</b> մտքեր */}
-              <b>unique</b> ideas
+              <b>Unique</b> ideas
             </h1>
           </div>
           <div className="flex items-center gap-[2rem] flex-col md:flex-row">
             <h1 className="text-[1.5rem] md:text-[3.3vw] font-thin">
-              {/* <b>Ձեր մեքենայի</b> համար */}
               <b>For your</b> car
+              {/* <b>Ձեր մեքենայի</b> համար */}
             </h1>
             <ArrowDownCircle />
           </div>

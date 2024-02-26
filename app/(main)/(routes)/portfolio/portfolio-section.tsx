@@ -7,10 +7,10 @@ import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
-import { ItemProps } from "@/constants/single-data";
 import { useModal } from "@/hooks/use-modal";
+import { ItemProps } from "@/lib/single-data";
 
-import { items } from "@/constants/single-data";
+import { items } from "@/lib/single-data";
 
 const Single = ({ item }: { item: ItemProps }) => {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -28,6 +28,7 @@ const Single = ({ item }: { item: ItemProps }) => {
 
   const { scrollYProgress } = useScroll({
     target: ref,
+    // offset: ["start start", "end start"],
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-100, 300]);

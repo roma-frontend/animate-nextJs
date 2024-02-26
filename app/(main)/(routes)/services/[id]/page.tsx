@@ -3,7 +3,7 @@
 import Loader from "@/components/loader";
 import NotFoundPage from "@/components/not-found";
 import Slider from "@/components/slider-carousel";
-import { contentData } from "@/constants/content-data";
+import { contentData } from "@/lib/content-data";
 import { motion } from "framer-motion";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
